@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_phone_call_notes_phone_call_notes,phone_call_notes.phone_call_notes,model_phone_call_notes_phone_call_notes,base.group_user,1,1,1,1
+access_phone_call_log_user,phone.call.log user,model_phone_call_log,base.group_user,1,1,1,1
