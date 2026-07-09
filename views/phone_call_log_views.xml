@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="view_phone_call_log_tree" model = "ir.ui.view">
+
+        <field name= "name">
+        phone.call.log.tree
+        </field>
+
+        <field name= "model">
+        phone.call.log
+        </field> 
+
+        <field name= "arch" type =  "xml">
+
+            <list>
+
+            <field name = "partner_id"/>
+            <field name = "phone"/>
+            <field name = "status"/>
+            <field name = "call_date"/>
+            <field name = "user_id"/>
+            
+            </list>
+        
+        </field>
+
+    </record>
+
+    <record id = "view_phone_call_log_form" model = "ir.ui.view">
+
+        <field name = "name"> phone.call.log </field>
+
+        <field name = "model"> phone.call.log </field>
+        
+        <field name = "arch" type = "xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="partner_id"/>
+                        <field name="phone"/>
+                        <field name="status"/>
+                        <field name="notes"/>
+                        <field name="call_date"/>
+                        <field name="user_id"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+    <record id = "view_phone_call_log_search" model = "ir.ui.view">
+
+        <field name = "name"> phone.call.log </field>
+
+        <field name = "model"> phone.call.log </field>
+
+        <field name = "arch" type= "xml">
+
+            <search>
+
+                <field name = "partner_id" />
+
+                <field name = "phone" />
+
+                <field name = "status" />
+
+            </search>
+
+        </field>
+
+    </record>
+
+
+</odoo>

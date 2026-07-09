@@ -35,7 +35,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
+        'views/phone_call_log_views.xml',
         'views/templates.xml',
     ],
 
