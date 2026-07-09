@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id ="view_res_partner_form_inherit_call_logs" model = "ir.ui.view">
+
+        <field name = "name">res.partner.form.call.logs</field>
+        <field name = "model">res.partner</field>
+        <field name = "inherit_id" ref = "base.view_partner_form"/>
+
+        <field name = "arch" type = "xml">
+
+            <xpath expr ="//div[@name='button_box']" position ="inside">
+            
+                <button
+                    name="action_view_call_logs"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-phone">
+
+                    <field
+                        name = "call_log_count"
+                        widget = "statinfo"
+                        string = "Call Logs"/>
+
+                </button>
+            
+            </xpath>
+
+        </field>
+                
+    </record>
+
+</odoo>

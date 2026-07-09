@@ -4,21 +4,18 @@
 
     <record id="view_phone_call_log_tree" model = "ir.ui.view">
 
-        <field name= "name">
-        phone.call.log.tree
-        </field>
+        <field name= "name">phone.call.log.list</field>
 
-        <field name= "model">
-        phone.call.log
-        </field> 
+        <field name= "model">phone.call.log</field> 
 
-        <field name= "arch" type =  "xml">
+        <field name= "arch" type = "xml">
 
             <list>
 
             <field name = "partner_id"/>
             <field name = "phone"/>
             <field name = "status"/>
+            <field name="notes"/>
             <field name = "call_date"/>
             <field name = "user_id"/>
             
@@ -30,9 +27,9 @@
 
     <record id = "view_phone_call_log_form" model = "ir.ui.view">
 
-        <field name = "name"> phone.call.log </field>
+        <field name = "name">phone.call.log.form</field>
 
-        <field name = "model"> phone.call.log </field>
+        <field name = "model">phone.call.log</field>
         
         <field name = "arch" type = "xml">
 
@@ -41,14 +38,21 @@
                 <sheet>
 
                     <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="phone"/>
+                            <field name="status"/>
+                        </group>
+                        
+                        <group>
+                            <field name="call_date"/>
+                            <field name="user_id"/>
+                        </group>
 
-                        <field name="partner_id"/>
-                        <field name="phone"/>
-                        <field name="status"/>
-                        <field name="notes"/>
-                        <field name="call_date"/>
-                        <field name="user_id"/>
-
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                        
                     </group>
 
                 </sheet>
@@ -61,9 +65,9 @@
 
     <record id = "view_phone_call_log_search" model = "ir.ui.view">
 
-        <field name = "name"> phone.call.log </field>
+        <field name = "name">phone.call.log.search</field>
 
-        <field name = "model"> phone.call.log </field>
+        <field name = "model">phone.call.log</field>
 
         <field name = "arch" type= "xml">
 
@@ -81,5 +85,29 @@
 
     </record>
 
+
+    <record id = "action_phone_call_log" model = "ir.actions.act_window">
+    
+        <field name = "name">Phone Call Logs</field>
+
+        <field name = "res_model">phone.call.log</field>
+
+        <field name = "view_mode">list,form</field>
+
+    </record>
+
+    <menuitem
+    
+    id = "menu_phone_call_root"
+    name = "Phone Call Logs"
+    />
+
+    <menuitem
+
+    id = "menu_phone_call_log"
+    name = "Call Logs"
+    parent = "menu_phone_call_root"
+    action = "action_phone_call_log"
+    />
 
 </odoo>

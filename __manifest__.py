@@ -36,7 +36,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/phone_call_log_views.xml',
-        'views/templates.xml',
+        'views/res_partner_views.xml',
     ],
 
     'installable': True,
