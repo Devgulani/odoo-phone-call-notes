@@ -1,9 +1,18 @@
 # Python
 __pycache__/
 *.py[cod]
-
-# Odoo cache
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env
+
+# Odoo
+*.log
+odoo_data/
+share/
 
 # VS Code
 .vscode/
@@ -13,3 +22,6 @@ __pycache__/
 
 # Windows
 Thumbs.db
+
+# Archives
+*.zip

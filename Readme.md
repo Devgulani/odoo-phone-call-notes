@@ -66,7 +66,7 @@ phone_call_notes/
 
 1. Open **Contacts**.
 2. Select any customer.
-3. Click the **Call Logs** Smart Button.
+3. Manage customer call logs directly from the Contact form using the integrated Call Logs Smart Button.
 4. Create and manage customer call records.
 5. View the complete call history for each contact.
 
