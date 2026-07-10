@@ -22,10 +22,21 @@
                         name = "call_log_count"
                         widget = "statinfo"
                         string = "Call Logs"/>
-
                 </button>
             
             </xpath>
+
+            <xpath expr = "//field[@name='phone']" position = "after">
+
+                    <button
+                        name="action_open_call_wizard"
+                        type="object"
+                        string="Call"
+                        icon="fa-phone"
+                        class="btn btn-primary"/>
+
+            </xpath>
+
 
         </field>
                 

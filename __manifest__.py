@@ -39,6 +39,7 @@
         'security/ir.model.access.csv',
         'views/phone_call_log_views.xml',
         'views/res_partner_views.xml',
+        'wizard/phone_call_wizard_views.xml',
     ],
 
     'installable': True,

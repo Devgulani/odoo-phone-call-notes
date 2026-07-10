@@ -32,3 +32,18 @@ class ResPartner(models.Model):
                 "default_partner_id": self.id,
             },
         }
+    
+    def action_open_call_wizard(self):
+        self.ensure_one()
+
+        return{
+            "type": "ir.actions.act_window",
+            "name": "Call Contact",
+            "res_model": "phone.call.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {
+                "default_partner_id": self.id,
+                "default_phone": self.phone,
+            },
+        }
